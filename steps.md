@@ -32,3 +32,27 @@
 
 ## Click sul contatto.
 - [x] Entrerà in funzione `displayChat` con argomento l'id del contatto.
+
+<br>
+
+# MILESTONE 3
+## Aggiunta di un messaggio.
+-[ ] Creare un'array `contactsCopy` copia dell'originale.
+-[ ] Creare una variabile `messageToSend`.
+-[ ] Crare una funzione `sendMessage`con parametro `userInput`:
+    -[ ]  
+-[ ] 
+-[ ] 
+-[ ] 
+
+<br>
+
+## Risposta dall'interlocutore.
+-[ ] 
+-[ ] 
+-[ ] 
+-[ ] 
+-[ ] 
+-[ ] 
+-[ ] 
+-[ ] 
