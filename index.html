@@ -112,26 +112,9 @@
                 <!-- Messages Section -->
                 <div class="messages-section d-flex flex-column px-5 py-2">
 
-                    <div class="sent">
-                        <p class="message mb-0 pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                            praesentium laudantium harum, eum quaerat itaque nobis sit! Ab, ad corrupti quis, vitae in
-                            assumenda repellendus quas laboriosam officia sit soluta.</p>
-                        <p class="msg-date mb-0">data di oggi</p>
-                    </div>
-
-                    <div class="sent">
-                        <p class="message mb-0 pt-2">prova testo inviato</p>
-                        <p class="msg-date mb-0">data di oggi</p>
-                    </div>
-
-                    <div class="received">
-                        <p class="message mb-0 pt-2">prova testo ricevuto</p>
-                        <p class="msg-date mb-0">data di oggi</p>
-                    </div>
-
-                    <div class="received">
-                        <p class="message mb-0 pt-2">prova testo ricevuto</p>
-                        <p class="msg-date mb-0">data di oggi</p>
+                    <div v-for="msg in contacts[0].messages" :class="msg.status">
+                        <p class="message mb-0 pt-2">{{msg.message}}</p>
+                        <p class="msg-date mb-0">{{msg.date}}</p>
                     </div>
 
                 </div>
