@@ -1,6 +1,6 @@
 # MILESTONE 1
 ## Replica della grafica.
-- [ ] Prelevare i colori.
+- [x] Prelevare i colori.
 - [ ] Importare `font-awesome`.
 - [ ] Creare lo sfondo principale.
 - [ ] Layout app dentro container.
