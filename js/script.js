@@ -207,8 +207,15 @@ const app = createApp({
     },
 
     methods: {
+
+        // Generate url from data
         createPicUrl(text) {
-            return `./img/avatar${text}.jpg`
+            return `./img/avatar${text}.jpg`;
+        },
+
+        // Change activeIndex by id
+        changeIndex(number) {
+            return this.activeIndex = number;
         }
     }
 });
