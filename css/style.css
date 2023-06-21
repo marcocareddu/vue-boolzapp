@@ -4,3 +4,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Custom Properties */
+:root {
+    --main-bgc: #009688;
+    --secondary-bgc: #dbdbd5;
+    --main-bgc-app: #eaeaea;
+    --icons-color: #b1b1b1;
+    --notification-color: #8edafc;
+    --sent-bgc: #d5f9ba;
+    --received-bgc: #fff;
+}
