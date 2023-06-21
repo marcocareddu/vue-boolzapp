@@ -5,6 +5,8 @@ const { createApp } = Vue;
 const app = createApp({
     data() {
         return {
+
+            activeIndex: 0,
             user: {
                 name: 'Nome Utente',
                 avatar: '_io'
