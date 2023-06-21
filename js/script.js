@@ -215,8 +215,8 @@ const app = createApp({
 
         // Change activeIndex by id
         changeIndex(number) {
-            return this.activeIndex = number;
-        }
+            this.activeIndex = number - 1;
+        },
     }
 });
 
