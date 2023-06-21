@@ -39,20 +39,13 @@
 ## Aggiunta di un messaggio.
 -[ ] Creare un'array `contactsCopy` copia dell'originale.
 -[ ] Creare una variabile `messageToSend`.
--[ ] Crare una funzione `sendMessage`con parametro `userInput`:
-    -[ ]  
--[ ] 
--[ ] 
--[ ] 
+-[ ] Creare una funzione `sendMessage`con parametro `userInput`:
+    -[ ] creare un template `newTemplate`.
+    -[ ] Pushare il `newTemplate` in `contactsCopy`.
+-[ ] V-model su input text che assegna a `messageToSend`.
+-[ ] @keyup.enter su input con `sendMessage` con parametro `messageToSend`.
 
 <br>
 
 ## Risposta dall'interlocutore.
--[ ] 
--[ ] 
--[ ] 
--[ ] 
--[ ] 
--[ ] 
--[ ] 
--[ ] 
+-[ ] Aggiungere a `sendMessage` un setTimeout che crea un messaggio dopo 1s e lo pusha in `contactsCopy`
