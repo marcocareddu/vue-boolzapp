@@ -15,6 +15,7 @@
     --sent-bgc: #d5f9ba;
     --received-bgc: #fff;
     --separation-border-color: #4747ff;
+    --head-and-foot-size: 70px;
 }
 
 /* Body */
@@ -35,8 +36,14 @@ body {
 
 /* Header App */
 .header {
-    height: 70px;
+    height: var(--head-and-foot-size);
     background-color: var(--main-bgc-app);
+}
+
+/* Notification alert */
+.notification-alert {
+    height: 80px;
+    background-color: var(--notification-color);
 }
 
 /* Conversation side */
@@ -48,12 +55,12 @@ body {
 
 /* Messages Section */
 .messages-section {
-    height: calc(100% - 140px);
+    height: calc(100% - var(--head-and-foot-size)*2);
     overflow: auto;
 }
 
 /* Conversation Footer */
 footer {
-    height: 70px;
+    height: var(--head-and-foot-size);
     background-color: var(--received-bgc);
 }
