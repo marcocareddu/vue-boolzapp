@@ -34,7 +34,7 @@ body {
 /* * ICONS */
 .fa-solid {
     color: var(--icons-color);
-    padding: 0 5px
+    padding: 0 8px
 }
 
 .footer-icon {
@@ -62,6 +62,10 @@ body {
 .header {
     height: var(--head-and-foot-size);
     background-color: var(--main-bgc-app);
+}
+
+.last-msg {
+    font-size: 12px;
 }
 
 /* Notification alert */
@@ -95,7 +99,7 @@ body {
 
 /* * CONVERSATION SIDE * */
 .conversation-side {
-    border-left: 2px solid var(--separation-border-color);
+    border-left: 1px solid var(--separation-border-color);
     background-image: url(../img/mine.jpg);
     flex: 1 1 auto;
 }
@@ -109,6 +113,7 @@ body {
 /* Single message */
 .received,
 .sent {
+    width: 250px;
     padding: 5px 10px;
     margin-top: 10px;
     border-radius: 10px;
