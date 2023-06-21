@@ -40,8 +40,15 @@
 
                 <!-- Contacts Header -->
                 <div class="header d-flex justify-content-between align-items-center px-2">
-                    <div class="user-info">prova</div>
-                    <div class="header-icons">prova2</div>
+                    <div class="d-flex align-items-center">
+                        <img :src="createPicUrl(user.avatar)" class="picture" alt="">
+                        <div class="user-info">{{user.name}}</div>
+                    </div>
+                    <div class="header-icons">
+                        <i class="fa-solid fa-circle-notch fa-xl"></i>
+                        <i class="fa-solid fa-message fa-xl"></i>
+                        <i class="fa-solid fa-ellipsis-vertical fa-xl"></i>
+                    </div>
                 </div>
 
                 <!-- Notification Section -->
@@ -59,8 +66,8 @@
                 <!-- Search contact -->
                 <div class="search-contact p-2">
                     <div class="input-group mb-3">
-                        <span class="input-group-text bg-transparent"><i
-                                class="fa-solid fa-magnifying-glass"></i></span>
+                        <span class="input-group-text bg-transparent">
+                            <i class="fa-solid fa-magnifying-glass"></i></span>
                         <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
                     </div>
                 </div>
@@ -69,7 +76,7 @@
                 <div class="contact-list">
                     <div v-for="person in contacts" class="single-contact d-flex justify-content-between p-3">
                         <div class="d-flex">
-                            <img src="./img/avatar_1.jpg" class="picture" alt="">
+                            <img :src="createPicUrl(person.avatar)" class="picture" alt="">
                             <div class="px-3">
                                 <h6 class="">{{person.name}}</h6>
                                 <h5 class="msg-date">Ultimo messaggio...</h5>
