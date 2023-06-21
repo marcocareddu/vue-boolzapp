@@ -1,10 +1,10 @@
 # MILESTONE 1
 ## Replica della grafica.
 - [x] Prelevare i colori.
-- [X] Importare `font-awesome`.
+- [x] Importare `font-awesome`.
 - [x] Creare lo sfondo principale.
-- [ ] Layout app dentro container.
-    - [ ] Due `<div>` affiancati, `contacts-side` e `conversation-side`.
+- [x] Layout app dentro container.
+    - [x] Due `<div>` affiancati, `contacts-side` e `conversation-side`.
     - [ ] Header di entrambi i `<div>`.
     - [ ] Footer di `conversation-side`.
     - [ ] Notification alert in `contacts-side`.
