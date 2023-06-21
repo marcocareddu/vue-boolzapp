@@ -6,7 +6,7 @@
 - [x] Layout app dentro container.
     - [x] Due `<div>` affiancati, `contacts-side` e `conversation-side`.
     - [x] Header di entrambi i `<div>`.
-    - [ ] Footer di `conversation-side`.
+    - [x] Footer di `conversation-side`.
     - [ ] Notification alert in `contacts-side`.
     - [ ] Search bar in `contacts-side`.
     - [ ] Hardcoding dei messaggi, `sent` e `received`.
