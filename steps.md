@@ -24,7 +24,7 @@
 # MILESTONE 2
 ## Visualizzazione dinamica dei messaggi.
 - [x] **V-FOR** visualizzare i messagi di un utente hardcoded.
-- [ ] Creare una variabile `activeIndex`.
+- [x] Creare una variabile `activeIndex`.
 - [ ] Creare una funzione `displayChat`:
     - [ ] Assegna un numero passato come argomento, in questo caso sarà l'id del contatto. 
 
