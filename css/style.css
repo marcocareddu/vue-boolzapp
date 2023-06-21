@@ -14,6 +14,7 @@
     --notification-color: #8edafc;
     --sent-bgc: #d5f9ba;
     --received-bgc: #fff;
+    --separation-border-color: #4747ff;
 }
 
 /* Body */
@@ -26,12 +27,21 @@ body {
             var(--secondary-bgc) 100%);
 }
 
+/* Contacts side */
 .contacts-side {
-    background-color: var(--main-bgc-app);
+    background-color: var(--received-bgc);
     flex: 0 0 400px;
 }
 
+/* Header App */
+.header {
+    height: 70px;
+    background-color: var(--main-bgc-app);
+}
+
+/* Conversation side */
 .conversation-side {
+    border-left: 2px solid var(--separation-border-color);
     background-image: url(../img/mine.jpg);
     flex: 1 1 auto;
 }
