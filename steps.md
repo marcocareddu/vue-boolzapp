@@ -10,7 +10,7 @@
     - [x] Notification alert in `contacts-side`.
     - [x] Search bar in `contacts-side`.
     - [x] Hardcoding dei messaggi, `sent` e `received`.
-    - [ ] Hardcoding contatti di `contacts-side`.
+    - [x] Hardcoding contatti di `contacts-side`.
 
 <br>
 
