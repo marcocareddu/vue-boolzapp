@@ -138,5 +138,5 @@ body {
 /* Conversation Footer */
 footer {
     height: var(--head-and-foot-size);
-    background-color: var(--received-bgc);
+    background-color: var(--main-bgc-app);
 }
