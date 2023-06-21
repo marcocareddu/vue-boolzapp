@@ -6,7 +6,7 @@ const app = createApp({
     data() {
         return {
             user: {
-                name: 'Nome Utente',
+                name: 'Marco Careddu',
                 avatar: '_io'
             },
             contacts: [
@@ -201,6 +201,12 @@ const app = createApp({
                     ],
                 }
             ]
+        }
+    },
+
+    methods: {
+        createPicUrl(number) {
+            return `./img/avatar_${number}.jpg`
         }
     }
 });
