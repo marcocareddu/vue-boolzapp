@@ -87,6 +87,7 @@ body {
 
 .single-contact:hover {
     background-color: var(--main-bgc-app);
+    cursor: pointer;
 }
 
 .picture {
