@@ -11,6 +11,7 @@
     --secondary-bgc: #dbdbd5;
     --main-bgc-app: #eaeaea;
     --icons-color: #b1b1b1;
+    --icons-dark-color: #6b7376;
     --notification-color: #8edafc;
     --sent-bgc: #d5f9ba;
     --received-bgc: #fff;
@@ -36,6 +37,21 @@ body {
     padding: 0 5px
 }
 
+.footer-icon {
+    color: var(--icons-dark-color);
+}
+
+.icon-circle {
+    background-color: #fff;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%
+}
+
+.icon-circle i {
+    color: var(--notification-color);
+}
+
 /* * CONTACTS SIDE * */
 .contacts-side {
     background-color: var(--received-bgc);
@@ -54,9 +70,8 @@ body {
     background-color: var(--notification-color);
 }
 
-/* Search contact */
-.search-contact {
-    height: var(--head-and-foot-size);
+.notify-msg button {
+    font-size: 12px;
 }
 
 /* Contact list */
