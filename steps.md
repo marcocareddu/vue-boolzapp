@@ -14,7 +14,7 @@
 
 <br>
 
-## Replica della grafica.
+## Visualizzazione dinamica della lista contatti.
 - [ ] Importare l'array `contacts` e l'oggetto `user`.
 - [ ] **V-FOR** di ogni elemento di `contacts`:
     - [ ] Stampare e collegare in DOM la lista di `contacts.name` e `contacts.avatar`.
