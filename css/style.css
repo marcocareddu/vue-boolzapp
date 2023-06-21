@@ -15,3 +15,13 @@
     --sent-bgc: #d5f9ba;
     --received-bgc: #fff;
 }
+
+/* Body */
+body {
+    height: 100vh;
+    background: linear-gradient(to bottom,
+            var(--main-bgc) 0%,
+            var(--main-bgc) 15%,
+            var(--secondary-bgc) 15%,
+            var(--secondary-bgc) 100%);
+}
