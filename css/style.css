@@ -30,7 +30,11 @@ body {
             var(--secondary-bgc) 100%);
 }
 
-
+/* * ICONS */
+.fa-solid {
+    color: var(--icons-color);
+    padding: 0 5px
+}
 
 /* * CONTACTS SIDE * */
 .contacts-side {
