@@ -16,9 +16,10 @@
     --received-bgc: #fff;
     --separation-border-color: #4747ff;
     --head-and-foot-size: 70px;
+    --double-size: calc(var(--head-and-foot-size) * 2)
 }
 
-/* Body */
+/* * BODY */
 body {
     height: 100vh;
     background: linear-gradient(to bottom,
@@ -28,7 +29,9 @@ body {
             var(--secondary-bgc) 100%);
 }
 
-/* Contacts side */
+
+
+/* * CONTACTS SIDE * */
 .contacts-side {
     background-color: var(--received-bgc);
     flex: 0 0 400px;
@@ -46,7 +49,19 @@ body {
     background-color: var(--notification-color);
 }
 
-/* Conversation side */
+/* Search contact */
+.search-contact {
+    height: var(--head-and-foot-size);
+}
+
+/* Contact list */
+.contact-list {
+    height: calc(100% - 220px);
+    overflow-y: auto;
+    background-color: var(--received-bgc);
+}
+
+/* * CONVERSATION SIDE * */
 .conversation-side {
     border-left: 2px solid var(--separation-border-color);
     background-image: url(../img/mine.jpg);
@@ -55,7 +70,7 @@ body {
 
 /* Messages Section */
 .messages-section {
-    height: calc(100% - var(--head-and-foot-size)*2);
+    height: calc(100% - var(--double-size));
     overflow: auto;
 }
 
