@@ -18,3 +18,17 @@
 - [x] Importare l'array `contacts` e l'oggetto `user`.
 - [x] **V-FOR** di ogni elemento di `contacts`:
     - [x] Stampare e collegare in DOM la lista di `contacts.name` e `contacts.avatar`.
+
+<br>
+
+# MILESTONE 2
+## Visualizzazione dinamica dei messaggi.
+- [ ] **V-FOR** visualizzare i messagi di un utente hardcoded.
+- [ ] Creare una variabile `activeIndex`.
+- [ ] Creare una funzione `displayChat`:
+    - [ ] Assegna un numero passato come argomento, in questo caso sarà l'id del contatto. 
+
+<br>
+
+## Click sul contatto.
+- [ ] Entrerà in funzione `displayChat` con argomento l'id del contatto.
