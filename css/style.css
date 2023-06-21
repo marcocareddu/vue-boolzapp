@@ -25,3 +25,13 @@ body {
             var(--secondary-bgc) 15%,
             var(--secondary-bgc) 100%);
 }
+
+.contacts-side {
+    background-color: var(--main-bgc-app);
+    flex: 0 0 400px;
+}
+
+.conversation-side {
+    background-image: url(../img/mine.jpg);
+    flex: 1 1 auto;
+}
