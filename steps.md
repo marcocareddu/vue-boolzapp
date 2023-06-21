@@ -25,8 +25,8 @@
 ## Visualizzazione dinamica dei messaggi.
 - [x] **V-FOR** visualizzare i messagi di un utente hardcoded.
 - [x] Creare una variabile `activeIndex`.
-- [ ] Creare una funzione `displayChat`:
-    - [ ] Assegna un numero passato come argomento, in questo caso sarà l'id del contatto. 
+- [x] Creare una funzione `changeIndex`:
+    - [x] Assegna un numero passato come argomento, in questo caso sarà l'id del contatto. 
 
 <br>
 
