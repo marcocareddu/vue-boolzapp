@@ -31,4 +31,4 @@
 <br>
 
 ## Click sul contatto.
-- [ ] Entrerà in funzione `displayChat` con argomento l'id del contatto.
+- [x] Entrerà in funzione `displayChat` con argomento l'id del contatto.
