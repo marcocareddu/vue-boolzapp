@@ -67,11 +67,11 @@
 
                 <!-- Contact list -->
                 <div class="contact-list">
-                    <div class="single-contact d-flex justify-content-between p-3">
+                    <div v-for="person in contacts" class="single-contact d-flex justify-content-between p-3">
                         <div class="d-flex">
                             <img src="./img/avatar_1.jpg" class="picture" alt="">
                             <div class="px-3">
-                                <h6 class="">Name</h6>
+                                <h6 class="">{{person.name}}</h6>
                                 <h5 class="msg-date">Ultimo messaggio...</h5>
                             </div>
                         </div>
