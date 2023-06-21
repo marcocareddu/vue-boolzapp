@@ -2,7 +2,7 @@
 ## Replica della grafica.
 - [x] Prelevare i colori.
 - [X] Importare `font-awesome`.
-- [ ] Creare lo sfondo principale.
+- [x] Creare lo sfondo principale.
 - [ ] Layout app dentro container.
     - [ ] Due `<div>` affiancati, `contacts-side` e `conversation-side`.
     - [ ] Header di entrambi i `<div>`.
