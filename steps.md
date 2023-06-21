@@ -9,7 +9,7 @@
     - [x] Footer di `conversation-side`.
     - [x] Notification alert in `contacts-side`.
     - [x] Search bar in `contacts-side`.
-    - [ ] Hardcoding dei messaggi, `sent` e `received`.
+    - [x] Hardcoding dei messaggi, `sent` e `received`.
     - [ ] Hardcoding contatti di `contacts-side`.
 
 <br>
