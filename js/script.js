@@ -6,7 +6,7 @@ const app = createApp({
     data() {
 
         return {
-            txtToSearch: '',
+            textToSearch: '',
             messageToSend: '',
             activeIndex: 0,
             user: {
