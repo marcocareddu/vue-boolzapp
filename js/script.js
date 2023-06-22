@@ -206,6 +206,15 @@ const app = createApp({
         }
     },
 
+    computed: {
+        // Id === array index
+        idPosition() {
+            this.contacts.forEach((person, i) => {
+                person.id = i;
+            });
+            console.log(this.contacts)
+        },
+    },
     methods: {
 
         // Generate url from data
@@ -215,7 +224,7 @@ const app = createApp({
 
         // Change activeIndex by id
         changeIndex(number) {
-            this.activeIndex = number - 1;
+            this.activeIndex = number;
         },
     }
 });
