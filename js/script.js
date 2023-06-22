@@ -4,7 +4,9 @@ const { createApp } = Vue;
 
 const app = createApp({
     data() {
+
         return {
+            txtToSearch: '',
             messageToSend: '',
             activeIndex: 0,
             user: {
