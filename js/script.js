@@ -8,7 +8,7 @@ const app = createApp({
         return {
             textToSearch: '',
             messageToSend: '',
-            activeIndex: 0,
+            activeId: null,
             user: {
                 name: 'Nome Utente',
                 avatar: '_io'
@@ -209,6 +209,10 @@ const app = createApp({
     },
 
     computed: {
+        activeContact() {
+            // return this.filteredContacts[this.activeId];
+            return this.contacts.find(contact => contact.id === this.activeId);
+        },
 
         // Generate filtered contacs
         filteredContacts() {
@@ -216,25 +220,15 @@ const app = createApp({
             return this.contacts.filter((contact) => contact.name.toLowerCase().includes(stringToSearch));
         },
 
-        // Id === array index
-        idPosition() {
-            this.filteredContacts.forEach((person, i) => {
-                person.id = i;
-            });
-        },
     },
 
     methods: {
 
         // Generate url from data
-        createPicUrl(text) {
-            return `./img/avatar${text}.jpg`;
-        },
+        createPicUrl: (text) => `./img/avatar${text}.jpg`,
 
-        // Change activeIndex by id
-        changeIndex(number) {
-            this.activeIndex = number;
-        },
+        // Change activeId by id
+        changeActiveId(number) { this.activeId = number; },
 
         // Receive new message with hardcoded id and Text, display after 1sec
         receiveMessage(id) {
@@ -246,7 +240,7 @@ const app = createApp({
             };
 
             // Receive a message after 1sec
-            setTimeout(() => { this.filteredContacts[id].messages.push(received) }, 1000)
+            setTimeout(() => { this.activeContact.messages.push(received) }, 1000);
         },
 
         // Send new message with hardcoded id
@@ -257,13 +251,18 @@ const app = createApp({
                 message: userInput,
                 status: 'sent'
             };
-            this.filteredContacts[id].messages.push(newMessage);
+            this.activeContact.messages.push(newMessage);
             this.messageToSend = '';
 
             // Start receiveMessage, display after 1 sec
             this.receiveMessage(id)
 
         },
+    },
+
+    // Set active id after create app
+    created() {
+        this.activeId = this.contacts[0].id;
     }
 });
 
