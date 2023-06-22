@@ -55,6 +55,6 @@
 ## Ricerca Utenti.
 - [x] Creare una variabile `textToSearch`.
 - [x] Collegare con v-model input a `textToSearch`.
-- [ ] Creare una computed `listToSearch`:
-    - [ ] Usando **filter** *ritorniamo* la copia di `contacts` filtrata con `textToSearch`.
-- [ ] Sostituire nel Dom i riferimenti a `contacts` con `listToSearch`.
+- [x] Creare una computed `filteredContacts`:
+    - [x] Usando **filter** *ritorniamo* la copia di `contacts` filtrata con `textToSearch`.
+- [x] Sostituire nel Dom i riferimenti a `contacts` con `filteredContacts`.
