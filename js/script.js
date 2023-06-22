@@ -227,6 +227,19 @@ const app = createApp({
             this.activeIndex = number;
         },
 
+        // Receive new message with hardcoded id and Text, display after 1sec
+        receiveMessage(id) {
+            const received = {
+                id: 34534,
+                date: '10/01/2020 15:30:55',
+                message: 'Ok!',
+                status: 'received'
+            };
+
+            // Receive a message after 1sec
+            setTimeout(() => { this.contacts[id].messages.push(received) }, 1000)
+        },
+
         // Send new message with hardcoded id
         sendMessage(userInput, id) {
             const newMessage = {
@@ -237,6 +250,10 @@ const app = createApp({
             };
             this.contacts[id].messages.push(newMessage);
             this.messageToSend = '';
+
+            // Start receiveMessage, display after 1 sec
+            this.receiveMessage(id)
+
         },
     }
 });
