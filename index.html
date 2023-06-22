@@ -125,7 +125,10 @@
                     <div class=" d-flex justify-content-between align-items-center">
                         <i class="footer-icon fa-regular fa-face-smile fa-xl"></i>
                     </div>
-                    <input type="text" class="form-control border-0 mx-2" placeholder="Scrivi un messaggio">
+
+                    <!-- Input send message on enter -->
+                    <input @keyup.enter="sendMessage(messageToSend, activeIndex)" type="text"
+                        class="form-control border-0 mx-2" v-model="messageToSend" placeholder="Scrivi un messaggio">
                     <i class="footer-icon fa-solid fa-microphone fa-xl"></i>
                 </footer>
             </div>
