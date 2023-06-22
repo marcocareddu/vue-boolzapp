@@ -5,7 +5,7 @@ const { createApp } = Vue;
 const app = createApp({
     data() {
         return {
-
+            messageToSend: '',
             activeIndex: 0,
             user: {
                 name: 'Nome Utente',
@@ -212,9 +212,9 @@ const app = createApp({
             this.contacts.forEach((person, i) => {
                 person.id = i;
             });
-            console.log(this.contacts)
         },
     },
+
     methods: {
 
         // Generate url from data
@@ -225,6 +225,18 @@ const app = createApp({
         // Change activeIndex by id
         changeIndex(number) {
             this.activeIndex = number;
+        },
+
+        // Send new message with hardcoded id
+        sendMessage(userInput, id) {
+            const newMessage = {
+                id: 34534,
+                date: '10/01/2020 15:30:55',
+                message: userInput,
+                status: 'sent'
+            };
+            this.contacts[id].messages.push(newMessage);
+            this.messageToSend = '';
         },
     }
 });
