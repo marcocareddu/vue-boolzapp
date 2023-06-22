@@ -37,14 +37,24 @@
 
 # MILESTONE 3
 ## Aggiunta di un messaggio.
--[x] Creare una variabile `messageToSend`.
--[x] Creare una funzione `sendMessage`con parametro `userInput`:
-    -[x] creare un template `newTemplate`.
-    -[x] Pushare il `newTemplate` in `contacts`.
--[x] V-model su input text che assegna a `messageToSend`.
--[x] @keyup.enter su input con `sendMessage` con parametro `messageToSend`.
+- [x] Creare una variabile `messageToSend`.
+- [x] Creare una funzione `sendMessage`con parametro `userInput`:
+    - [x] creare un template `newTemplate`.
+    - [x] Pushare il `newTemplate` in `contacts`.
+- [x] V-model su input text che assegna a `messageToSend`.
+- [x] @keyup.enter su input con `sendMessage` con parametro `messageToSend`.
 
 <br>
 
 ## Risposta dall'interlocutore.
 -[x] Aggiungere a `sendMessage` un setTimeout che crea un messaggio dopo 1s e lo pusha in `contacts`.
+
+<br>
+
+# MILESTONE 4
+## Ricerca Utenti.
+- [ ] Creare una variabile `textToSearch`.
+- [ ] Collegare con v-model input a `textToSearch`.
+- [ ] Creare una computed `listToSearch`:
+    - [ ] Usando **filter** *ritorniamo* la copia di `contacts` filtrata con `textToSearch`.
+- [ ] Sostituire nel Dom i riferimenti a `contacts` con `listToSearch`.
