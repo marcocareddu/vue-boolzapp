@@ -47,4 +47,4 @@
 <br>
 
 ## Risposta dall'interlocutore.
--[ ] Aggiungere a `sendMessage` un setTimeout che crea un messaggio dopo 1s e lo pusha in `contacts`
+-[x] Aggiungere a `sendMessage` un setTimeout che crea un messaggio dopo 1s e lo pusha in `contacts`.
