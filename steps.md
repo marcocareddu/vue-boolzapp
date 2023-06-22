@@ -53,7 +53,7 @@
 
 # MILESTONE 4
 ## Ricerca Utenti.
-- [ ] Creare una variabile `textToSearch`.
+- [x] Creare una variabile `textToSearch`.
 - [ ] Collegare con v-model input a `textToSearch`.
 - [ ] Creare una computed `listToSearch`:
     - [ ] Usando **filter** *ritorniamo* la copia di `contacts` filtrata con `textToSearch`.
