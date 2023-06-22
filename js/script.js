@@ -219,8 +219,10 @@ const app = createApp({
             return this.activeContact.messages.length - 1;
         },
 
+
         // Display current last message date
-        lastMsgDate() {
+        lastMsgDate(input) {
+            let position = this.activeContact.messages.length - 1
             return this.activeContact.messages[this.lastMsgPosition].date;
         },
 
@@ -229,6 +231,11 @@ const app = createApp({
             const stringToSearch = this.textToSearch.toLowerCase();
             return this.contacts.filter((contact) => contact.name.toLowerCase().includes(stringToSearch));
         },
+
+        // Create date
+        nowDate() {
+            return new Date().toLocaleString();
+        }
 
     },
 
@@ -244,7 +251,7 @@ const app = createApp({
         receiveMessage(id) {
             const received = {
                 id: this.lastMsgPosition + 1,
-                date: '10/01/2020 15:30:55',
+                date: this.nowDate,
                 message: 'Ok!',
                 status: 'received'
             };
@@ -256,7 +263,7 @@ const app = createApp({
         sendMessage(userInput) {
             const newMessage = {
                 id: this.lastMsgPosition + 1,
-                date: '10/01/2020 15:30:55',
+                date: this.nowDate,
                 message: userInput,
                 status: 'sent'
             };
