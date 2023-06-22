@@ -209,9 +209,16 @@ const app = createApp({
     },
 
     computed: {
+
+        // Generate filtered contacs
+        filteredContacts() {
+            const stringToSearch = this.textToSearch.toLowerCase();
+            return this.contacts.filter((contact) => contact.name.toLowerCase().includes(stringToSearch));
+        },
+
         // Id === array index
         idPosition() {
-            this.contacts.forEach((person, i) => {
+            this.filteredContacts.forEach((person, i) => {
                 person.id = i;
             });
         },
@@ -239,7 +246,7 @@ const app = createApp({
             };
 
             // Receive a message after 1sec
-            setTimeout(() => { this.contacts[id].messages.push(received) }, 1000)
+            setTimeout(() => { this.filteredContacts[id].messages.push(received) }, 1000)
         },
 
         // Send new message with hardcoded id
@@ -250,7 +257,7 @@ const app = createApp({
                 message: userInput,
                 status: 'sent'
             };
-            this.contacts[id].messages.push(newMessage);
+            this.filteredContacts[id].messages.push(newMessage);
             this.messageToSend = '';
 
             // Start receiveMessage, display after 1 sec
