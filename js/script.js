@@ -216,7 +216,12 @@ const app = createApp({
 
         // Display Last message id for current id
         lastMsgPosition() {
-            return this.activeContact.messages.length;
+            return this.activeContact.messages.length - 1;
+        },
+
+        // Display current last message date
+        lastMsgDate() {
+            return this.activeContact.messages[this.lastMsgPosition].date;
         },
 
         // Generate filtered contacs
