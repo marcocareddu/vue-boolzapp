@@ -214,6 +214,11 @@ const app = createApp({
             return this.contacts.find(contact => contact.id === this.activeId);
         },
 
+        // Display Last message id for current id
+        lastMsgPosition() {
+            return this.activeContact.messages.length;
+        },
+
         // Generate filtered contacs
         filteredContacts() {
             const stringToSearch = this.textToSearch.toLowerCase();
@@ -233,20 +238,19 @@ const app = createApp({
         // Receive new message with hardcoded id and Text, display after 1sec
         receiveMessage(id) {
             const received = {
-                id: 34534,
+                id: this.lastMsgPosition + 1,
                 date: '10/01/2020 15:30:55',
                 message: 'Ok!',
                 status: 'received'
             };
-
             // Receive a message after 1sec
             setTimeout(() => { this.activeContact.messages.push(received) }, 1000);
         },
 
         // Send new message with hardcoded id
-        sendMessage(userInput, id) {
+        sendMessage(userInput) {
             const newMessage = {
-                id: 34534,
+                id: this.lastMsgPosition + 1,
                 date: '10/01/2020 15:30:55',
                 message: userInput,
                 status: 'sent'
@@ -255,7 +259,7 @@ const app = createApp({
             this.messageToSend = '';
 
             // Start receiveMessage, display after 1 sec
-            this.receiveMessage(id)
+            this.receiveMessage()
 
         },
     },
