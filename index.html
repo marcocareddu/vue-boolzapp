@@ -128,9 +128,8 @@
                     </div>
 
                     <!-- Input send message on enter -->
-                    <input @keyup.enter="sendMessage(messageToSend, activeIndex)" type="text"
-                        class="form-control border-0 mx-2" v-model.trim="messageToSend"
-                        placeholder="Scrivi un messaggio">
+                    <input @keyup.enter="sendMessage(messageToSend)" type="text" class="form-control border-0 mx-2"
+                        v-model.trim="messageToSend" placeholder="Scrivi un messaggio">
                     <i class="footer-icon fa-solid fa-microphone fa-xl"></i>
                 </footer>
             </div>
