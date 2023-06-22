@@ -37,15 +37,14 @@
 
 # MILESTONE 3
 ## Aggiunta di un messaggio.
--[ ] Creare un'array `contactsCopy` copia dell'originale.
--[ ] Creare una variabile `messageToSend`.
--[ ] Creare una funzione `sendMessage`con parametro `userInput`:
-    -[ ] creare un template `newTemplate`.
-    -[ ] Pushare il `newTemplate` in `contactsCopy`.
--[ ] V-model su input text che assegna a `messageToSend`.
--[ ] @keyup.enter su input con `sendMessage` con parametro `messageToSend`.
+-[x] Creare una variabile `messageToSend`.
+-[x] Creare una funzione `sendMessage`con parametro `userInput`:
+    -[x] creare un template `newTemplate`.
+    -[x] Pushare il `newTemplate` in `contacts`.
+-[x] V-model su input text che assegna a `messageToSend`.
+-[x] @keyup.enter su input con `sendMessage` con parametro `messageToSend`.
 
 <br>
 
 ## Risposta dall'interlocutore.
--[ ] Aggiungere a `sendMessage` un setTimeout che crea un messaggio dopo 1s e lo pusha in `contactsCopy`
+-[ ] Aggiungere a `sendMessage` un setTimeout che crea un messaggio dopo 1s e lo pusha in `contacts`
