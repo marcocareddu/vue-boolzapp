@@ -11,6 +11,7 @@ const app = createApp({
             textToSearch: '',
             messageToSend: '',
             activeId: null,
+            dropdownStatus: false,
             user: {
                 name: 'Nome Utente',
                 avatar: '_io'
@@ -232,6 +233,11 @@ const app = createApp({
     },
 
     methods: {
+
+        toggleDropdown() {
+            this.dropdownStatus = !this.dropdownStatus;
+        },
+
 
         // Generate url from data
         createPicUrl: (text) => `./img/avatar${text}.jpg`,
