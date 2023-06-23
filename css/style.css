@@ -110,6 +110,7 @@ body {
 /* Single message */
 .received,
 .sent {
+    position: relative;
     width: 250px;
     padding: 5px 10px;
     margin-top: 10px;
@@ -145,5 +146,14 @@ ul li {
 }
 
 .d-down {
-    display: none;
+    background-color: var(--main-bgc-app);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 200px;
+    position: absolute;
+    z-index: 1;
+    top: 40px;
+    left: 40px;
 }
