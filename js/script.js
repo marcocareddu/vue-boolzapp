@@ -269,11 +269,6 @@ const app = createApp({
             // Receive a message after 1sec
             setTimeout(() => { this.createNewMsg('Ok!', 'received') }, 1000);
         },
-
-        // Remove active message
-        removeMessage() {
-            this.filteredContacts.this.activeContact.messages.splice(this.activeMsg - 1);
-        },
     },
 
     // Set active id after create app
