@@ -11,6 +11,7 @@ const app = createApp({
             textToSearch: '',
             messageToSend: '',
             activeId: null,
+            activeMsgId: null,
             dropdownStatus: false,
             user: {
                 name: 'Nome Utente',
@@ -234,16 +235,17 @@ const app = createApp({
 
     methods: {
 
-        toggleDropdown() {
-            this.dropdownStatus = !this.dropdownStatus;
-        },
-
+        // Toggle dropdownd
+        toggleDropdown() { this.dropdownStatus = !this.dropdownStatus; },
 
         // Generate url from data
         createPicUrl: (text) => `./img/avatar${text}.jpg`,
 
         // Change activeId by id
         changeActiveId(number) { this.activeId = number; },
+
+        // Change active Message id
+        setActiveMsgId(number) { this.activeMsgId = number; },
 
         // Create new object and push
         createNewMsg(message, status) {
