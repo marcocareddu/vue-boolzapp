@@ -137,3 +137,13 @@ footer {
     height: var(--head-and-foot-size);
     background-color: var(--main-bgc-app);
 }
+
+/* * DROPDOWN */
+
+ul li {
+    list-style-type: none;
+}
+
+.d-down {
+    display: none;
+}
