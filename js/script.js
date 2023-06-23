@@ -217,6 +217,9 @@ const app = createApp({
         // return this.filteredContacts[this.activeId];
         activeContact() { return this.contacts.find(contact => contact.id === this.activeId); },
 
+        // Create Active message Id
+        activeMsg() { return this.activeContact.messages.find(message => message.id === this.activeMsgId) },
+
         // Display Last message id for current id
         lastMsgPosition() { return this.activeContact.messages.length - 1 },
 
@@ -266,10 +269,18 @@ const app = createApp({
             // Receive a message after 1sec
             setTimeout(() => { this.createNewMsg('Ok!', 'received') }, 1000);
         },
+
+        // Remove active message
+        removeMessage() {
+            this.filteredContacts.this.activeContact.messages.splice(this.activeMsg - 1);
+        },
     },
 
     // Set active id after create app
-    created() { this.activeId = this.contacts[0].id }
+    created() {
+        this.activeId = this.contacts[0].id
+        this.activeMsgId = this.contacts[0].messages[0].id
+    }
 });
 
 // mount
