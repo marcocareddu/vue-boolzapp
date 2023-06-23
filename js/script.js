@@ -3,6 +3,7 @@ console.log('Vue OK', Vue);
 const { createApp } = Vue;
 
 const app = createApp({
+    name: 'Boolzapp',
     data() {
 
         return {
@@ -215,14 +216,12 @@ const app = createApp({
         },
 
         // Display Last message id for current id
-        lastMsgPosition() {
-            return this.activeContact.messages.length - 1;
-        },
+        lastMsgPosition() { return this.activeContact.messages.length - 1 },
 
         // Display current last message date
         lastMsgDate() {
             let position = this.activeContact.messages.length - 1
-            return this.activeContact.messages[this.lastMsgPosition].date;
+            return this.activeContact.messages[position].date;
         },
 
         // Generate filtered contacs
@@ -270,9 +269,7 @@ const app = createApp({
     },
 
     // Set active id after create app
-    created() {
-        this.activeId = this.contacts[0].id;
-    }
+    created() { this.activeId = this.contacts[0].id }
 });
 
 // mount
