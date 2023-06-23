@@ -117,10 +117,14 @@
                     <div v-for="msg in activeContact.messages" :class="msg.status">
                         <div class="d-flex align-items-center justify-content-between">
                             <p class="message mb-0 pt-2">{{msg.message}}</p>
-                            <span><i class="fa-solid fa-caret-down"></i></span>
+                            <span @click="toggleDropdown"><i class="fa-solid fa-caret-down"></i></span>
                         </div>
 
                         <p class="msg-date mb-0">{{msg.date}}</p>
+                        <ul :class="{'d-down' : !dropdownStatus}">
+                            <li>Elimina messaggio</li>
+                            <li>Info messaggio</li>
+                        </ul>
                     </div>
 
                 </div>
