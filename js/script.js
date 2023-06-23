@@ -4,6 +4,7 @@ const { createApp } = Vue;
 
 const app = createApp({
     name: 'Boolzapp',
+
     data() {
 
         return {
@@ -210,17 +211,16 @@ const app = createApp({
     },
 
     computed: {
-        activeContact() {
-            // return this.filteredContacts[this.activeId];
-            return this.contacts.find(contact => contact.id === this.activeId);
-        },
+
+        // return this.filteredContacts[this.activeId];
+        activeContact() { return this.contacts.find(contact => contact.id === this.activeId); },
 
         // Display Last message id for current id
         lastMsgPosition() { return this.activeContact.messages.length - 1 },
 
         // Display current last message date
         lastMsgDate() {
-            let position = this.activeContact.messages.length - 1
+            const position = this.activeContact.messages.length - 1
             return this.activeContact.messages[position].date;
         },
 
@@ -239,32 +239,24 @@ const app = createApp({
         // Change activeId by id
         changeActiveId(number) { this.activeId = number; },
 
-        // Receive new message id and Text, display after 1sec
-        receiveMessage(id) {
-            const received = {
-                id: this.lastMsgPosition + 1,
-                date: new Date().toLocaleString(),
-                message: 'Ok!',
-                status: 'received'
-            };
-            // Receive a message after 1sec
-            setTimeout(() => { this.activeContact.messages.push(received) }, 1000);
-        },
-
-        // Send new message with hardcoded id
-        sendMessage(userInput) {
+        // Create new object and push
+        createNewMsg(message, status) {
             const newMessage = {
                 id: this.lastMsgPosition + 1,
                 date: new Date().toLocaleString(),
-                message: userInput,
-                status: 'sent'
+                message,
+                status
             };
             this.activeContact.messages.push(newMessage);
+        },
+
+        // Send new message with hardcoded id
+        sendMessage() {
+            this.createNewMsg(this.messageToSend, 'sent');
             this.messageToSend = '';
 
-            // Start receiveMessage, display after 1 sec
-            this.receiveMessage()
-
+            // Receive a message after 1sec
+            setTimeout(() => { this.createNewMsg('Ok!', 'received') }, 1000);
         },
     },
 
