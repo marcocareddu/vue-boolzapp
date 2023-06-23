@@ -219,9 +219,8 @@ const app = createApp({
             return this.activeContact.messages.length - 1;
         },
 
-
         // Display current last message date
-        lastMsgDate(input) {
+        lastMsgDate() {
             let position = this.activeContact.messages.length - 1
             return this.activeContact.messages[this.lastMsgPosition].date;
         },
@@ -231,12 +230,6 @@ const app = createApp({
             const stringToSearch = this.textToSearch.toLowerCase();
             return this.contacts.filter((contact) => contact.name.toLowerCase().includes(stringToSearch));
         },
-
-        // Create date
-        nowDate() {
-            return new Date().toLocaleString();
-        }
-
     },
 
     methods: {
@@ -247,11 +240,11 @@ const app = createApp({
         // Change activeId by id
         changeActiveId(number) { this.activeId = number; },
 
-        // Receive new message with hardcoded id and Text, display after 1sec
+        // Receive new message id and Text, display after 1sec
         receiveMessage(id) {
             const received = {
                 id: this.lastMsgPosition + 1,
-                date: this.nowDate,
+                date: new Date().toLocaleString(),
                 message: 'Ok!',
                 status: 'received'
             };
@@ -263,7 +256,7 @@ const app = createApp({
         sendMessage(userInput) {
             const newMessage = {
                 id: this.lastMsgPosition + 1,
-                date: this.nowDate,
+                date: new Date().toLocaleString(),
                 message: userInput,
                 status: 'sent'
             };
