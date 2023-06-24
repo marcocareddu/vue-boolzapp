@@ -13,6 +13,8 @@ const app = createApp({
             activeId: null,
             activeMsgId: null,
             dropdownStatus: false,
+            answerToSend: '',
+            answerIndex: 0,
             user: {
                 name: 'Nome Utente',
                 avatar: '_io'
@@ -208,6 +210,22 @@ const app = createApp({
                         }
                     ],
                 }
+            ],
+            answers: [
+                "Non saprei, dovrei pensarci",
+                "Ma anche no!",
+                "Oggi ho judo",
+                "Tua sorella",
+                "Come la tua faccia",
+                "Cacca pupù",
+                "Se solo potessi...",
+                "Ma cosa vuoi?!",
+                "Ma ci conosciamo?",
+                "Chi ti ha dato il mio numero?",
+                "Ti denunzioquereloh!",
+                "Il Bosco con gli alberi",
+                "Pinocchio",
+                "La mucca viola della pubblicità"
             ]
         }
     },
@@ -234,11 +252,24 @@ const app = createApp({
             const stringToSearch = this.textToSearch.toLowerCase();
             return this.contacts.filter((contact) => contact.name.toLowerCase().includes(stringToSearch));
         },
+
+        // set answer length
+        answerLength() {
+            return this.answers.length;
+        },
+
+        // Create random answer
+        createAnswer() {
+            return this.answers[this.answerIndex];
+        },
     },
 
     methods: {
 
-        // Toggle dropdownd
+        // Create answers random index
+        setRandomIndex() { this.answerIndex = Math.floor(Math.random() * this.answerLength); },
+
+        // Toggle dropdown
         toggleDropdown() { this.dropdownStatus = !this.dropdownStatus; },
 
         // Generate url from data
@@ -267,7 +298,9 @@ const app = createApp({
             this.messageToSend = '';
 
             // Receive a message after 1sec
-            setTimeout(() => { this.createNewMsg('Ok!', 'received') }, 1000);
+            this.setRandomIndex();
+            this.answerToSend = this.createAnswer;
+            setTimeout(() => { this.createNewMsg(this.answerToSend, 'received') }, 1000);
         },
     },
 
