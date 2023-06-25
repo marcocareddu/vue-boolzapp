@@ -82,7 +82,7 @@
                             <img :src="createPicUrl(person.avatar)" class="picture" alt="">
                             <div class="px-3">
                                 <h6 class="">{{person.name}}</h6>
-                                <h5 class="msg-date">Ultimo messaggio...</h5>
+                                <h5 class="last-msg">{{ person.messages[person.messages.length - 1].message }}</h5>
                             </div>
                         </div>
                         <div>
