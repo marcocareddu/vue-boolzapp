@@ -129,10 +129,19 @@ body {
     background-color: var(--sent-bgc);
 }
 
-.msg-date {
+.msg-date,
+.last-msg {
     text-align: right;
     font-size: 10px;
     color: var(--text-date);
+}
+
+.last-msg {
+    text-align: left;
+    width: 20ch;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 /* Conversation Footer */
