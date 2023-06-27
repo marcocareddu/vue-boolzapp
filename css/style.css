@@ -160,13 +160,16 @@ ul li {
 .d-down {
     background-color: var(--main-bgc-app);
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    display: none;
     padding: 10px;
     width: 200px;
     position: absolute;
     z-index: 1;
     top: 40px;
     left: 40px;
+}
+
+.sent:hover .d-down,
+.received:hover .d-down {
+    display: block
 }

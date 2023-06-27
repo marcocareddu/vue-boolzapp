@@ -81,7 +81,7 @@
                         <div class="d-flex">
                             <img :src="createPicUrl(person.avatar)" class="picture" alt="">
                             <div class="px-3">
-                                <h6 class="">{{person.name}}</h6>
+                                <h6 class="">{{ person.name }}</h6>
                                 <h5 class="last-msg">{{ person.messages[person.messages.length - 1].message }}</h5>
                             </div>
                         </div>
@@ -114,7 +114,8 @@
                 <!-- Messages Section -->
                 <div class="messages-section d-flex flex-column px-5 py-2">
 
-                    <div v-for="msg in activeContact.messages" :class="msg.status" @click="setActiveMsgId(msg.id)">
+                    <div v-for="msg in activeContact.messages" class="" :class="msg.status"
+                        @click="setActiveMsgId(msg.id)" @mouseleave="dropdownStatus = false">
                         <div class="d-flex align-items-center justify-content-between">
                             <p class="message mb-0 pt-2">{{msg.message}}</p>
                             <span @click="toggleDropdown"><i class="fa-solid fa-caret-down"></i></span>

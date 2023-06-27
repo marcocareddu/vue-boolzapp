@@ -12,6 +12,7 @@ const app = createApp({
             messageToSend: '',
             activeId: null,
             activeMsgId: null,
+            activeMessageText: '',
             dropdownStatus: false,
             answerToSend: '',
             answerIndex: 0,
@@ -254,14 +255,11 @@ const app = createApp({
         },
 
         // set answer length
-        answerLength() {
-            return this.answers.length;
-        },
+        answerLength() { return this.answers.length; },
 
         // Create random answer
-        createAnswer() {
-            return this.answers[this.answerIndex];
-        },
+        createAnswer() { return this.answers[this.answerIndex]; },
+
     },
 
     methods: {
